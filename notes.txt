@@ -1,0 +1,8 @@
+
+23 - 04- 2018 [Monday] 
+
+development ----> Testing -----> UAT -----> Staging ----> Production [100% complete]
+
+Azure - switches staging and production making staging live 
+
+AB Tesing: finding out which is more acceptable to the user

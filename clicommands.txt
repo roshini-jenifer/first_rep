@@ -1,0 +1,23 @@
+>aws configure
+
+>aws ec2 describe-instances
+
+>aws ec2 describe-instances --query "Reservations[*].Instances[*].[InstanceId,State.Name,Placement.AvailabilityZone]" --output table
+
+>aws ec2 describe-instances --query "Reservations[*].Instances[*].[InstanceId,State.Name,Placement.AvailabilityZone]" --output table > report.txt
+
+> filtering the contents: --> grep === Select-String-Pattern
+
+---------------->aws ec2 describe-instances --query "Reservations[*].Instances[*].[InstanceId,State.Name,Placement.AvailabilityZone]" --output table | Select-String -Pattern "us-east-2
+b" | Select-String -Pattern "stopped" > report2.txt
+
+>aws s3api list-objects --bucket buckt111 --page-size 50 --max-items 25 --starting-token eyJNYXJrZXIiOiBudWxsLCAiYm90b190cnVuY2F0ZV9hbW91bnQiOiAyNX0=
+
+
+DYNAMO DB
+
+
+>aws dynamodb create-table --table-name tab123 --attribute-definitions AttributeName=Sparks,AttributeType=S AttributeName=Rowling,AttributeType=S --key-schema Attribute
+Name=Sparks,KeyType=HASH AttributeName=Rowling,KeyType=RANGE --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1
+
+>aws lambda create-function --region us-east-2 --function-name python1 --zip-file C:\newfol --handler python1.funk --runtime python3.6 --timeout 15 --memory-size 512
