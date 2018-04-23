@@ -3,4 +3,4 @@
 
 def funk( event, content):
 
-	print('Hello, world!');
+	print('Hello, world it is a bad world!');
